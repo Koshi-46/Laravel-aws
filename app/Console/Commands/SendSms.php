@@ -31,7 +31,7 @@ class SendSms extends Command
 
         $sns->publish([
             'Message' => 'テスト',
-            'PhoneNumber' => '+81803939955' // 電話番号を入れる
+            'PhoneNumber' => '+818000000000' // 電話番号を入れる
         ]);
     }
 }
