@@ -24,3 +24,5 @@ Route::view('upload', 'upload');
 Route::post('s3', [\App\Http\Controllers\S3Controller::class, 'uploadS3'])->name('s3');
 
 Route::post('job', [\App\Http\Controllers\WebApiController::class, 'job'])->name('job');
+
+Route::post('mail', [\App\Http\Controllers\WebApiController::class, 'send'])->name('mail');
