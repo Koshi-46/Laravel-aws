@@ -44,11 +44,12 @@ class WebApiController extends Controller
 
     public function send(Request $request){
         $original_encoding = mb_internal_encoding();
-        $to = iconv_mime_encode(mb_convert_encoding($request->input('name'),"ISO-2022-JP",$original_encoding), 'ISO-2022-JP')." <".$request->input('email').">";
+        $name = mb_convert_encoding($request->input('name'), "ISO-2022-JP", $original_encoding);
+        $to = $name . ' <' . $request->input('email') . '>';
         
         $ses = AWS::createClient('ses');
         $ses->sendEmail([
-            'Source' => '<送信元メールアドレス>',
+            'Source' => "test@simpletest.click",
             'Destination' => [
               'ToAddresses' => [
                 $to,
@@ -62,7 +63,7 @@ class WebApiController extends Controller
               'Body' => [
                 'Text' => [
                   'Charset' => 'UTF-8',
-                  'Data' => $request->input('comments'),
+                  'Data' => "test",
                 ],
               ],
             ],

@@ -43,13 +43,13 @@
                 <input type="subject" class="form-control" id="subject" name="subject" required>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 form-group">
-                <label for="comments">
-                    Comments:</label>
-                <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="5"></textarea>
-            </div>
-        </div>
+        <!--<div class="row">-->
+        <!--    <div class="col-sm-12 form-group">-->
+        <!--        <label for="comments">-->
+        <!--            Comments:</label>-->
+        <!--        <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Comments" maxlength="6000" rows="5"></textarea>-->
+        <!--    </div>-->
+        <!--</div>-->
         
         <div class="row">
             <div class="col-sm-12 form-group">
